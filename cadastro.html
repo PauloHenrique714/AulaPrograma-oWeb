@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhe Conosco &#10084;&#65039;</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Trabalhe conosco e nos ajude a cuidar de mais animaizinhos</h1>
+        <nav>
+            <div class="logo">&#128153; Voluntários</div>
+            <button class="menu-toggle" onclick="toggleMenu()">&#10084;&#65039;</button>
+            <ul id="navMenu">
+                <li><a href="index.html">Página Inicial</a></li>
+                <li><a href="projeto.html" class="active">Sobre nós</a></li>
+                <li><a href="cadastro.html">Trabalhe Conosco</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero hero-cadastro">
+        <div class="hero-content">
+            <h1>Cadastre-se Para Ser Um Voluntário</h1>
+            <p>Venha conosco fazer a diferença!</p>
+        </div>
+
+    </section>
+
+    <main>
+        <section class="signup-section">
+            <h2> Formulário Para Novos Voluntários</h2>
+            <div class="sucess-message" id="sucessMensage">
+                Cadastro realizado com sucesso!
+            </div>
+
+            <form id="VoluntariosForm" onsubmit="handleSubmit(event)">
+                <fieldset>
+                    <legend>Dados Pessoais:</legend>
+                    <div class="form-group">
+                        <label for="nome"> Nome Completo*:</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Telefone">Número de telefone:*</label>
+                        <input type="number" id="telefone" name="telefone" placeholder="(11) 9876-5432" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Idade">Sua Idade:*</label>
+                        <input type="number" id="number" name="Idade" min="18" max="70" required>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Disponibilidade</legend>
+                    <div class="form-group">
+                        <label for="Disponibilidade">Quando atuar como Voluntário</label>
+                        <select id="Disponibilidade" name="Disponibilidade" required>
+                            <option value="">Selecione a opção</option>
+                            <option value="fim_de_semana">Fim de Semana</option>
+                            <option value="feriados">Feriados</option>
+                            <option value="meio_da_semana">Meio da Semana</option>
+                            
+                        </select>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Informações Adicionais</legend>
+                    <div class="form-group">
+                        <label for="experiencia">Já foi voluntário antes?</label>
+                        <textarea id="experiencia" name="experiencia" placeholder="Conte-nos como foi.."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="motivaçao">Por que você quer ser voluntário?</label>
+                        <textarea id="motivaçao" name="motivaçao" placeholder="Compartilhe conoso..."></textarea>
+                    </div>
+                </fieldset>
+
+                <button type="submit" class="btn-primary">Enviar cadastro</button>
+
+            </form>
+
+        
+
+        <section class="voluntarios-lista">
+            <h2>Voluntários já cadastrados</h2>
+            <div id="TabelaVoluntarios">      
+            </div>
+            <button onclick="limparTabela()">Limpar Tabela</button>
+        </section>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Organização Junto Por Eles. Todos Os Direitos Reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
